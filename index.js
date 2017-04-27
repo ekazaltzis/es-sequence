@@ -149,7 +149,7 @@ function fillCache(sequenceName) {
     var bulkParams = { body: [] };
     for ( var i = 0; i < _cacheSize; i+=1 ) {
       // Action
-      bulkParams.body.push({ index: { _index: _options.esIndex, _type: _options.esType, _id: sequenceName } });
+      bulkParams.body.push({ index: { index: _options.esIndex, type: _options.esType, _id: sequenceName } });
       // Empty document
       bulkParams.body.push({});
     }
